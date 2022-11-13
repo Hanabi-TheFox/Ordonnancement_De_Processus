@@ -7,9 +7,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include "fonction.h"
+#include "data.h"
 
 int main(){
-	Processus p;
+	lecture_data();
+	/*Processus p;
 	strcpy(p.Nom, "Processus 1");
 	p.duree_execution = 10;
 	p.priorite = 1;
@@ -21,7 +23,7 @@ int main(){
 	strcpy(p.Nom, "Processus 3");
 	p.duree_execution = 4;
 	p.priorite = 0;
-	ajout_activite(p);
+	ajout_activite(p);*/
 	run();
 	printf("Fin du programme\n");
 	return 0;

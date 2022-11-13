@@ -29,6 +29,11 @@ int step(){
 }
 
 void run(){
+	if(est_vide_Ordonnenceur())
+	{
+		printf("Il n'y à aucun processus à éxecuter.\n");
+		exit(1);
+	}
 	while(step());
 	printf("Tous les processus ont été exécutés\n");
 }
