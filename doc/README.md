@@ -9,7 +9,7 @@
 
 Ce Projet à été réalisé par Ethan Pinto et Renato Nascimento Ardiles
 
-Il fut données par Madame ndeye arame DIAGO
+Il fut donné par Madame ndeye arame DIAGO
 
 Le but de ce projet est de simuler le fonctionnement de l'ordonnement des processus.
 ## Executer le projet
