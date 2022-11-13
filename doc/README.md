@@ -1,17 +1,39 @@
 
-## Authors
+## Auteurs
 
 - [@Hanabi-TheFox](https://www.github.com/Hanabi-TheFox)
 -  [@RDNATOS](https://github.com/RDNATOS)
 
 
-## Contexte
+## Contextualisation
 
 Ce Projet à été réalisé par Ethan Pinto et Renato Nascimento Ardiles
 
 Il fut données par Madame ndeye arame DIAGO
 
+Le but de ce projet est de simuler le fonctionnement de l'ordonnement des processus.
+## Executer le projet
 
+tapper "make" dans le terminale pour compiler le projet
+
+tapper "make run" pour éxecuter le projet
+
+## Modification du code
+
+Le code n'à pas besoin d'être modifié.
+Pour changer la liste des processsus, vous avez juste à changer le contenue
+du fichier "processsus.csv"
+
+chaque ligne doit être écrit de la forme suivante :
+
+"Nom_Du_Processus;Durée_Execution;Priorité"
+
+**Nom_Du_Processus** est une chaine de max 50 caractères
+
+**Durée_Execution** est un entier.
+
+**Priorié** est un entier compris entre les valeurs *priorite_min* (défaut = 0)
+et *priorite_max* (défaut = 5)
 ## Consignes
 
 Sujet 2 : Ordonnancement de processus 
@@ -27,11 +49,11 @@ effectivement du temps processeur sont ceux qui attendent depuis le plus longtem
 Un processus est caractérisé par un nom, une durée d’exécution et une priorité. La priorité est un 
 entier compris entre 0 et 5 par exemple. Un ordonnanceur est caractérisé par une file de processus.  
  
-    (a) Créer les structures permettant de modéliser un processus et un ordonnanceur et écrire les programmes suivants :  
+    (a)  Créer les structures permettant de modéliser un processus et un ordonnanceur et écrire les programmes suivants :  
     (b) ajout_activite qui ajoute une activité passée en paramètre à la file de processus de l’ordonnanceur. 
-    (c) step qui effectue un “tour” d’ordonnancement comme suit : si la file est vide, on le dit et on ne fait rien. S’il y a au moins une activité dans la file, on défile et on exécute l’activité en affichant son nom et sa durée et en attendant le temps correspondant à la durée de l’activité.  
+    (c)  step qui effectue un “tour” d’ordonnancement comme suit : si la file est vide, on le dit et on ne fait rien. S’il y a au moins une activité dans la file, on défile et on exécute l’activité en affichant son nom et sa durée et en attendant le temps correspondant à la durée de l’activité.  
     (d) run qui itère step jusqu’à obtenir une file de processus vide. 
-    (e) Ecrire un programme principal.
+    (e)  Ecrire un programme principal.
 
 
 ## Contenu
@@ -81,25 +103,3 @@ permettant l'execution et la compilation du projet
 **ordonnencementDeProcessus**
 
 l'executable
-## Executer le projet
-
-tapper "make" dans le terminale pour compiler le projet
-
-tapper "make run" pour éxecuter le projet
-
-## Modification du code
-
-Le code n'à pas besoin d'être modifié.
-Pour changer la liste des processsus, vous avez juste à changer le contenue
-du fichier "processsus.csv"
-
-chaque ligne doit être écrit de la forme suivante :
-
-"Nom_Du_Processus;Durée_Execution;Priorité"
-
-**Nom_Du_Processus** est une chaine de max 50 caractères
-
-**Durée_Execution** est un entier.
-
-**Priorié** est un entier compris entre les valeurs *priorite_min* (défaut = 0)
-et *priorite_max* (défaut = 5)
