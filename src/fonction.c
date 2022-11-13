@@ -14,10 +14,12 @@ void ajout_activite(Processus struct_Processus){
 }
 
 int step(){
-	if(est_vide_Ordonnenceur()){
+	if(est_vide_Ordonnenceur())
+	{
 		return 0;
 	}
-	else{
+	else
+	{
 		printf("Nom du processus : %s\n", tete_Ordonnenceur().char_Nom);
 		printf("Durée d'exécution du processus : %d\n", tete_Ordonnenceur().int_duree_execution);
 		printf("Priorité du processus : %d\n", tete_Ordonnenceur().int_priorite);
