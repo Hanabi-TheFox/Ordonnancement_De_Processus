@@ -20,13 +20,13 @@ tapper "make run" dans le terminal pour éxecuter le projet
 
 ## Modification du code
 
-Le code n'à pas besoin d'être modifié.
-Pour changer la liste des processsus, vous avez juste à changer le contenue
+Le code n'a pas besoin d'être modifié.
+Pour changer la liste des processsus, vous avez juste à changer le contenu
 du fichier "processsus.csv"
 
 chaque ligne doit être écrit de la forme suivante :
 
-"Nom_Du_Processus;Durée_Execution;Priorité"
+    Nom_Du_Processus;Durée_Execution;Priorité
 
 **Nom_Du_Processus** est une chaine de max 50 caractères
 
@@ -34,6 +34,7 @@ chaque ligne doit être écrit de la forme suivante :
 
 **Priorié** est un entier compris entre les valeurs *priorite_min* (défaut = 0)
 et *priorite_max* (défaut = 5)
+
 ## Consignes
 
 Sujet 2 : Ordonnancement de processus 
