@@ -14,9 +14,9 @@ Il fut donné par Madame ndeye arame DIAGO
 Le but de ce projet est de simuler le fonctionnement de l'ordonnement des processus.
 ## Executer le projet
 
-tapper "make" dans le terminale pour compiler le projet
+tapper "make" dans le terminal pour compiler le projet
 
-tapper "make run" pour éxecuter le projet
+tapper "make run" dans le terminal pour éxecuter le projet
 
 ## Modification du code
 
