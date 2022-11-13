@@ -32,7 +32,7 @@ chaque ligne doit être écrit de la forme suivante :
 
 **Durée_Execution** est un entier.
 
-**Priorié** est un entier compris entre les valeurs *priorite_min* (défaut = 0)
+**Priorité** est un entier compris entre les valeurs *priorite_min* (défaut = 0)
 et *priorite_max* (défaut = 5)
 
 ## Consignes
