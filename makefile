@@ -11,7 +11,7 @@ docdir= doc/
 SRC=$(wildcard $(srcdir)*.c)
 HEAD=$(wildcard $(srcdir)*.h)
 OBJ=$(subst $(srcdir), $(bindir), $(SRC:.c=.o))
-PROG=habitationLocation
+PROG=ordonnencementDeProcessus
 
 $(PROG): $(OBJ)
 	$(CC) $(CFLAGS) $^ -o $@
