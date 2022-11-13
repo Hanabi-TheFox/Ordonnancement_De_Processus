@@ -40,54 +40,55 @@ void afficher_Ordonnenceur(){
 		printf("La file est vide\n");
 		exit(1);
 	}
-	Ordonnenceur *tmp = head;
+	Ordonnenceur *struct_Ordonnenceur_tmp = head;
 	printf("Affichage de la file des processus :\n\n");
-	while(tmp != NULL)
+	while(struct_Ordonnenceur_tmp != NULL)
 	{
-		printf("Nom du processus : %s\n", tmp->proc.Nom);
-		printf("Durée d'exécution du processus : %d\n", tmp->proc.duree_execution);
-		printf("Priorité du processus : %d\n", tmp->proc.priorite);
-		tmp = tmp->next;
+		printf("Nom du processus : %s\n", struct_Ordonnenceur_tmp->proc.char_Nom);
+		printf("Durée d'exécution du processus : %d\n", struct_Ordonnenceur_tmp->proc.int_duree_execution);
+		printf("Priorité du processus : %d\n", struct_Ordonnenceur_tmp->proc.int_priorite);
+		struct_Ordonnenceur_tmp = struct_Ordonnenceur_tmp->next;
 		printf("\n");
 	}
 }
 
-	void ajouter_Ordonnenceur(Processus p){
-		if(p.priorite < priorite_min || p.priorite > priorite_max)
+	void ajouter_Ordonnenceur(Processus struct_Processus){
+		if(struct_Processus.int_priorite < priorite_min || struct_Processus.int_priorite > priorite_max)
 		{
 			printf("La priorité du processus est incorrecte\n");
 			exit(1);
 		}
-		Ordonnenceur *tmp = head;
-		Ordonnenceur *new = malloc(sizeof(Ordonnenceur));
-		new->proc = p;
-		new->next = NULL;
+		Ordonnenceur *struct_Ordonnenceur_tmp = head;
+		Ordonnenceur *struct_Ordonnenceur = malloc(sizeof(Ordonnenceur));
+		struct_Ordonnenceur->proc = struct_Processus;
+		struct_Ordonnenceur->next = NULL;
 		if(est_vide_Ordonnenceur())
 		{
 			// on ajoute le processus en tête de file
-			head = new; 
-			tail = new;
+			head = struct_Ordonnenceur; 
+			tail = struct_Ordonnenceur;
 		}
 		else
 		{
-			if(p.priorite < head->proc.priorite)
+			if(struct_Processus.int_priorite < head->proc.int_priorite)
 			{
-				new->next = head;
-				head = new;
+				struct_Ordonnenceur->next = head;
+				head = struct_Ordonnenceur;
 			}
-			else if(p.priorite > tail->proc.priorite)
+			else if(struct_Processus.int_priorite > tail->proc.int_priorite)
 			{
-				tail->next = new;
-				tail = new;
+				tail->next = struct_Ordonnenceur;
+				tail = struct_Ordonnenceur;
 			}
 			else
 			{
-				while(tmp->next != NULL && tmp->next->proc.priorite < p.priorite)
+				while(struct_Ordonnenceur_tmp->next != NULL && 
+				struct_Ordonnenceur_tmp->next->proc.int_priorite <= struct_Processus.int_priorite)
 				{
-					tmp = tmp->next;
+					struct_Ordonnenceur_tmp = struct_Ordonnenceur_tmp->next;
 				}
-				new->next = tmp->next;
-				tmp->next = new;
+				struct_Ordonnenceur->next = struct_Ordonnenceur_tmp->next;
+				struct_Ordonnenceur_tmp->next = struct_Ordonnenceur;
 			}
 		}
 	}
@@ -98,7 +99,7 @@ void afficher_Ordonnenceur(){
 			printf("La file est vide\n");
 			exit(1);
 		}
-		Ordonnenceur *tmp = head;
+		Ordonnenceur *struct_Ordonnenceur_tmp = head;
 		if(head == tail)
 		{
 			head = NULL;
@@ -108,7 +109,7 @@ void afficher_Ordonnenceur(){
 		{
 			head = head->next;
 		}
-		free(tmp);
+		free(struct_Ordonnenceur_tmp);
 	}
 
 	void clear_Ordonnenceur(void){

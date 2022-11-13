@@ -9,8 +9,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-void ajout_activite(Processus processus){
-	ajouter_Ordonnenceur(processus);
+void ajout_activite(Processus struct_Processus){
+	ajouter_Ordonnenceur(struct_Processus);
 }
 
 int step(){
@@ -18,11 +18,11 @@ int step(){
 		return 0;
 	}
 	else{
-		printf("Nom du processus : %s\n", tete_Ordonnenceur().Nom);
-		printf("Durée d'exécution du processus : %d\n", tete_Ordonnenceur().duree_execution);
-		printf("Priorité du processus : %d\n", tete_Ordonnenceur().priorite);
+		printf("Nom du processus : %s\n", tete_Ordonnenceur().char_Nom);
+		printf("Durée d'exécution du processus : %d\n", tete_Ordonnenceur().int_duree_execution);
+		printf("Priorité du processus : %d\n", tete_Ordonnenceur().int_priorite);
 		printf("Exécution du processus en cours...\n\n");
-		sleep(tete_Ordonnenceur().duree_execution);
+		sleep(tete_Ordonnenceur().int_duree_execution);
 		defiler_Ordonnenceur();
 		return 1;
 	}

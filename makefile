@@ -24,3 +24,8 @@ bin/%.o : src/%.c
 .PHONY: clean
 clean:
 	$(RM)
+
+# Lancer le programme
+.PHONY: run
+run: $(PROG)
+	./$(PROG)

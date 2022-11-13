@@ -11,19 +11,6 @@
 
 int main(){
 	lecture_data();
-	/*Processus p;
-	strcpy(p.Nom, "Processus 1");
-	p.duree_execution = 10;
-	p.priorite = 1;
-	ajout_activite(p);
-	strcpy(p.Nom, "Processus 2");
-	p.duree_execution = 3;
-	p.priorite = 3;
-	ajout_activite(p);
-	strcpy(p.Nom, "Processus 3");
-	p.duree_execution = 4;
-	p.priorite = 0;
-	ajout_activite(p);*/
 	run();
 	printf("Fin du programme\n");
 	return 0;

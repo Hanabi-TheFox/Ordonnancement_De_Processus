@@ -8,7 +8,7 @@
 #include "file.h"
 
 // ajoute un processus dans la file de l'ordonnanceur
-void ajout_activite(Processus processus);
+void ajout_activite(Processus struct_Processus);
 // supprime un processsus de la file de l'ordonnanceur
 int step(void);
 // itère step jusqu’à obtenir une file de processus vide.

@@ -9,6 +9,6 @@ int est_vide_Ordonnenceur(void);
 Processus tete_Ordonnenceur(void);
 Processus queue_Ordonnenceur(void);
 void afficher_Ordonnenceur(void);
-void ajouter_Ordonnenceur(Processus p);
+void ajouter_Ordonnenceur(Processus struct_Processus);
 void defiler_Ordonnenceur(void);
 void clear_Ordonnenceur(void);

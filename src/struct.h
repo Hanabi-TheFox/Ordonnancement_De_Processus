@@ -15,9 +15,9 @@
 // Structure des processus
 typedef struct Processus
 {
-	char Nom[30]; // Nom du processus
-	int duree_execution; // durée d'exécution du processus
-	int priorite; // priorité du processus (compris entre 0 et 5)
+	char char_Nom[50]; // Nom du processus
+	int int_duree_execution; // durée d'exécution du processus
+	int int_priorite; // priorité du processus (compris entre 0 et 5)
 }Processus;
 
 // Structure de la file des ordonnanceurs
