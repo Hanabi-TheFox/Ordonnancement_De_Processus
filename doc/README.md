@@ -27,11 +27,11 @@ effectivement du temps processeur sont ceux qui attendent depuis le plus longtem
 Un processus est caractérisé par un nom, une durée d’exécution et une priorité. La priorité est un 
 entier compris entre 0 et 5 par exemple. Un ordonnanceur est caractérisé par une file de processus.  
  
-    (a)  Créer les structures permettant de modéliser un processus et un ordonnanceur et écrire les programmes suivants :  
+    (a) Créer les structures permettant de modéliser un processus et un ordonnanceur et écrire les programmes suivants :  
     (b) ajout_activite qui ajoute une activité passée en paramètre à la file de processus de l’ordonnanceur. 
-    (c)  step qui effectue un “tour” d’ordonnancement comme suit : si la file est vide, on le dit et on ne fait rien. S’il y a au moins une activité dans la file, on défile et on exécute l’activité en affichant son nom et sa durée et en attendant le temps correspondant à la durée de l’activité.  
+    (c) step qui effectue un “tour” d’ordonnancement comme suit : si la file est vide, on le dit et on ne fait rien. S’il y a au moins une activité dans la file, on défile et on exécute l’activité en affichant son nom et sa durée et en attendant le temps correspondant à la durée de l’activité.  
     (d) run qui itère step jusqu’à obtenir une file de processus vide. 
-    (e)  Ecrire un programme principal.
+    (e) Ecrire un programme principal.
 
 
 ## Contenu
