@@ -1,0 +1,5 @@
+Nom_Du_Processus;Durée_Execution;Priorité
+Démarage de Firefox;2;1
+Sauvegarde du fichier de travail;7;2
+Vidage de la corbeille;1;0
+Mise à jour de la base de données;5;3
