@@ -39,6 +39,8 @@ chaque ligne doit être écrit de la forme suivante :
 **Priorité** est un entier compris entre les valeurs *priorite_min* (défaut = 0)
 et *priorite_max* (défaut = 5)
 
+Si une chaine de caractère est mit à la place des entier, le programme fera comme si la valeur donnée était 0.
+
 ## Consignes
 
 Sujet 2 : Ordonnancement de processus 
