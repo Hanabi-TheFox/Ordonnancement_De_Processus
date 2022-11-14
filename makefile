@@ -38,8 +38,3 @@ help:
 	@echo "make run : compile et lance le programme"
 	@echo "make clean : supprime les fichiers .o"
 	@echo "make help : affiche ce message"
-
-# Créer la documentation
-.PHONY: doc
-doc:
-	doxygen $(docdir)Doxyfile
