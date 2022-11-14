@@ -13,6 +13,7 @@ HEAD=$(wildcard $(srcdir)*.h)
 OBJ=$(subst $(srcdir), $(bindir), $(SRC:.c=.o))
 PROG=ordonnencementDeProcessus
 
+# Créer l'executable
 $(PROG): $(OBJ)
 	$(CC) $(CFLAGS) $^ -o $@
 
@@ -29,3 +30,16 @@ clean:
 .PHONY: run
 run: $(PROG)
 	./$(PROG)
+
+# Que peut on faire avec un makefile ?
+.PHONY: help
+help:
+	@echo "make : compile le programme"
+	@echo "make run : compile et lance le programme"
+	@echo "make clean : supprime les fichiers .o"
+	@echo "make help : affiche ce message"
+
+# Créer la documentation
+.PHONY: doc
+doc:
+	doxygen $(docdir)Doxyfile

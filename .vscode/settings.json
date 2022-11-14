@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "stdlib.h": "c",
-        "fonction.h": "c"
+        "fonction.h": "c",
+        "struct.h": "c"
     }
 }

@@ -2,7 +2,7 @@
 ## Auteurs
 
 - [@Hanabi-TheFox](https://www.github.com/Hanabi-TheFox)
--  [@RDNATOS](https://github.com/RDNATOS)
+- [@RDNATOS](https://github.com/RDNATOS)
 
 
 ## Contextualisation
@@ -14,9 +14,13 @@ Il fut donné par Madame ndeye arame DIAGO
 Le but de ce projet est de simuler le fonctionnement de l'ordonnement des processus.
 ## Executer le projet
 
-tapper "make" dans le terminal pour compiler le projet
+make : compile le programme
 
-tapper "make run" dans le terminal pour éxecuter le projet
+make run : compile et lance le programme
+
+make clean : supprime les fichiers .o
+
+make help : affiche ce message
 
 ## Modification du code
 
