@@ -3,13 +3,7 @@
 //--------------------------------------------------
 
 // Fichier dans lequel seront écrits toutes les fonctions déclarés par data.h
-
-#include "struct.h"
-#include "fonction.h"
 #include "data.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 void lecture_data(){
 	FILE *FILE_fichier = fopen("data/processus.csv", "r");

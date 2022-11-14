@@ -4,9 +4,6 @@
 
 // Fichier dans lequel seront écrits toutes les fonctions déclarés par file.h
 #include "file.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 int est_vide_Ordonnenceur(){
 	if(head == NULL && tail == NULL)
@@ -53,6 +50,7 @@ void afficher_Ordonnenceur(){
 }
 
 	void ajouter_Ordonnenceur(Processus struct_Processus){
+		// On vérifie si la variable priorité est compris entre les valeurs attendus.
 		if(struct_Processus.int_priorite < priorite_min || struct_Processus.int_priorite > priorite_max)
 		{
 			printf("La priorité du processus est incorrecte\n");
@@ -70,11 +68,15 @@ void afficher_Ordonnenceur(){
 		}
 		else
 		{
+			// Si la priorité du processus est plus petit que celui de la tête de file
+			// on l'ajoute en tête de file.
 			if(struct_Processus.int_priorite < head->proc.int_priorite)
 			{
 				struct_Ordonnenceur->next = head;
 				head = struct_Ordonnenceur;
 			}
+			// Si la priorité du processus est plus grand que celui de la queue de file
+			// on l'ajoute en queue de file.
 			else if(struct_Processus.int_priorite > tail->proc.int_priorite)
 			{
 				tail->next = struct_Ordonnenceur;
@@ -82,6 +84,10 @@ void afficher_Ordonnenceur(){
 			}
 			else
 			{
+				// Sinon, on parcours la liste jusqu'à trouver un processus de priorité
+				// plus grande que celui du processus à ajouter.
+				// Avec ces vérifications, les processus seront donc toujours triés par priorité.
+				// Mais aussi par ordre d'appel si deux processus ont la même priorité.
 				while(struct_Ordonnenceur_tmp->next != NULL && 
 				struct_Ordonnenceur_tmp->next->proc.int_priorite <= struct_Processus.int_priorite)
 				{
@@ -99,6 +105,7 @@ void afficher_Ordonnenceur(){
 			printf("La file est vide\n");
 			exit(1);
 		}
+		// Comme l'ordonenceur est trié par priorité, on supprime toujours le premier élément.
 		Ordonnenceur *struct_Ordonnenceur_tmp = head;
 		if(head == tail)
 		{
@@ -113,6 +120,7 @@ void afficher_Ordonnenceur(){
 	}
 
 	void clear_Ordonnenceur(void){
+		// tant que la file n'est pas vide, on supprime le premier élément.
 		while(!est_vide_Ordonnenceur())
 		{
 			defiler_Ordonnenceur();

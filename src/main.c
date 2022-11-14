@@ -3,14 +3,13 @@
 //--------------------------------------------------
 
 // Fichier Main
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "fonction.h"
 #include "data.h"
 
 int main(){
+	// On lit le fichier data/processus.csv
 	lecture_data();
+	// On lance l'ordonnanceur
 	run();
 	printf("Fin du programme\n");
 	return 0;
