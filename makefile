@@ -11,7 +11,7 @@ docdir= doc/
 SRC=$(wildcard $(srcdir)*.c)
 HEAD=$(wildcard $(srcdir)*.h)
 OBJ=$(subst $(srcdir), $(bindir), $(SRC:.c=.o))
-PROG=ordonnencementDeProcessus
+PROG=Ordonnement_De_Processus
 
 # Créer l'executable
 $(PROG): $(OBJ)
@@ -26,6 +26,11 @@ bin/%.o : src/%.c
 clean:
 	$(RM)
 
+# Supprime les fichiers .o dans bin et l'exectuable
+.PHONY: clean_all
+clean_all: clean
+	$(RM) $(PROG)
+
 # Lancer le programme
 .PHONY: run
 run: $(PROG)
@@ -37,4 +42,5 @@ help:
 	@echo "make : compile le programme"
 	@echo "make run : compile et lance le programme"
 	@echo "make clean : supprime les fichiers .o"
+	@echo "make clean_all : supprime les fichiers .o et l'exectuable"
 	@echo "make help : affiche ce message"

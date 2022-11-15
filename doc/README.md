@@ -20,6 +20,8 @@ make run : compile et lance le programme
 
 make clean : supprime les fichiers .o
 
+make clean_all : supprime les fichiers .o et l'exectuable
+
 make help : affiche ce message
 
 ## Modification du code
