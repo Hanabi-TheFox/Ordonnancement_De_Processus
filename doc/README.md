@@ -12,6 +12,11 @@ Ce Projet à été réalisé par Ethan Pinto et Renato Nascimento Ardiles
 Il fut donné par Madame ndeye arame DIAGO
 
 Le but de ce projet est de simuler le fonctionnement de l'ordonnement des processus.
+
+En se fiant aux consignes de ce projet, notre équipe part du principe que l'ordonnenceur va trier les processus dans l'ordre suivant :
+- 1 : De la priorité l a plus basse (0), à la priorité la plus élevé (5)
+- 2 : Dans l'ordre FIFO (First In First Out), c'est à dire : le premier processus de priorité 0 sera executé en premier, et le dernier processus de priorité 0 sera le dernier processus executé avant de passer aux processus de priorité 1.
+- 3 : De manière intuitive, la priorité donné aux processus est lié à leur temps d'exécution. Ainsi, les processus de priorité 0 sont très cours, là où les processus de priorité 5 sont les plus long à exécuter. Cela est donc représenté dans notre fichier processus.csv
 ## Executer le projet
 
 make : compile le programme
