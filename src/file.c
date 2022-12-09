@@ -77,7 +77,7 @@ void afficher_Ordonnenceur(){
 			}
 			// Si la priorité du processus est plus grand que celui de la queue de file
 			// on l'ajoute en queue de file.
-			else if(struct_Processus.int_priorite > tail->proc.int_priorite)
+			else if(struct_Processus.int_priorite >= tail->proc.int_priorite)
 			{
 				tail->next = struct_Ordonnenceur;
 				tail = struct_Ordonnenceur;
